@@ -1,0 +1,280 @@
+{
+  "scope": "Conditional prediction benchmark; rear surface is a measured boundary, absorber is latent",
+  "data_DOI": "10.57739/3720",
+  "working_fluid": "43% propylene glycol by mass in water",
+  "Cp_JpkgK": 3650.0,
+  "density_kgpm3": 1040.0,
+  "area": "Not fixed or inferred separately from absorptance",
+  "electrical_aperture_coefficients": [
+    0.27084142254538157,
+    -0.0005415931506760017,
+    -0.028649732608316065
+  ],
+  "empirical_relative_temperature_coefficient_per_K": -0.001999668830513743,
+  "selected_variant": "wind_front",
+  "selected_parameters": {
+    "C_PV": 37992.44749980281,
+    "C_absorber": 200.0000000000056,
+    "C_fluid": 9559.987087992025,
+    "H_front": 11.538473920376427,
+    "H_PV_absorber": 236.76650135223267,
+    "H_absorber_rear": 24.924355115016397,
+    "H_absorber_fluid": 64.57659391766968,
+    "H_sky": 18.045173732003676,
+    "solar_aperture": 2.999999882685114,
+    "H_wind": 14.618221267230297
+  },
+  "all_fit_attempts": [
+    {
+      "variant": "constant_front",
+      "seed": 0,
+      "training_MSE": 5.029646857811609,
+      "nfev": 24,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "parameters": {
+        "C_PV": 35364.38776095407,
+        "C_absorber": 200.0000016856599,
+        "C_fluid": 7886.8473458392455,
+        "H_front": 6.2872008977748415,
+        "H_PV_absorber": 1121.3190990535031,
+        "H_absorber_rear": 105.02120791779681,
+        "H_absorber_fluid": 45.514540207977625,
+        "H_sky": 6.8622751249287575,
+        "solar_aperture": 2.992497680935492,
+        "H_wind": 0.0
+      },
+      "active_bounds": [
+        "C_absorber"
+      ],
+      "jacobian_condition": 55032.69571525366,
+      "development_PV": {
+        "RMSE": 2.3730870259950114,
+        "MAE": 1.9210778908023778,
+        "bias": -0.928625266226925
+      },
+      "development_fluid": {
+        "RMSE": 1.6753899706356359,
+        "MAE": 1.3909914562072072,
+        "bias": -0.748799022468094
+      },
+      "selection_score_K": 2.0242384983153237
+    },
+    {
+      "variant": "constant_front",
+      "seed": 1,
+      "training_MSE": 5.029658687150615,
+      "nfev": 21,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "parameters": {
+        "C_PV": 35325.02735422629,
+        "C_absorber": 200.0000030930797,
+        "C_fluid": 7885.530609747519,
+        "H_front": 6.2773915433043905,
+        "H_PV_absorber": 1119.9504172590593,
+        "H_absorber_rear": 104.92133217375674,
+        "H_absorber_fluid": 45.520405029469515,
+        "H_sky": 6.85696660581547,
+        "solar_aperture": 2.9898516594290605,
+        "H_wind": 0.0
+      },
+      "active_bounds": [
+        "C_absorber"
+      ],
+      "jacobian_condition": 54957.35530971583
+    },
+    {
+      "variant": "wind_front",
+      "seed": 0,
+      "training_MSE": 1.2832339289009538,
+      "nfev": 15,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "parameters": {
+        "C_PV": 37992.44749980281,
+        "C_absorber": 200.0000000000056,
+        "C_fluid": 9559.987087992025,
+        "H_front": 11.538473920376427,
+        "H_PV_absorber": 236.76650135223267,
+        "H_absorber_rear": 24.924355115016397,
+        "H_absorber_fluid": 64.57659391766968,
+        "H_sky": 18.045173732003676,
+        "solar_aperture": 2.999999882685114,
+        "H_wind": 14.618221267230297
+      },
+      "active_bounds": [
+        "C_absorber",
+        "solar_aperture"
+      ],
+      "jacobian_condition": 15347.128648104112,
+      "development_PV": {
+        "RMSE": 0.8903522237562436,
+        "MAE": 0.6616909735545013,
+        "bias": -0.00906982283132001
+      },
+      "development_fluid": {
+        "RMSE": 0.8543403896969539,
+        "MAE": 0.6632158339240198,
+        "bias": -0.13617851636654904
+      },
+      "selection_score_K": 0.8723463067265987
+    },
+    {
+      "variant": "wind_front",
+      "seed": 1,
+      "training_MSE": 1.2832339450783414,
+      "nfev": 14,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "parameters": {
+        "C_PV": 37991.48806130752,
+        "C_absorber": 200.00000000000225,
+        "C_fluid": 9561.366611931247,
+        "H_front": 11.53854516127361,
+        "H_PV_absorber": 236.7608200517099,
+        "H_absorber_rear": 24.92420837210441,
+        "H_absorber_fluid": 64.57887100258834,
+        "H_sky": 18.04521115878417,
+        "solar_aperture": 2.999999718159947,
+        "H_wind": 14.61821472127896
+      },
+      "active_bounds": [
+        "C_absorber",
+        "solar_aperture"
+      ],
+      "jacobian_condition": 15347.517693273474
+    }
+  ],
+  "scores": {
+    "calibration": {
+      "PV_temperature_C": {
+        "RMSE": 1.2379808696691736,
+        "MAE": 0.8485177571675352,
+        "bias": 0.12283360827466408
+      },
+      "flowing_outlet_C": {
+        "RMSE": 0.9204633907374502,
+        "MAE": 0.7028495589698294,
+        "bias": -0.054969260432250776
+      },
+      "electrical_power_W": {
+        "RMSE": 8.616555330786364,
+        "MAE": 4.960879139019166,
+        "bias": 0.3752209380666388
+      },
+      "static_PV_temperature_C": {
+        "RMSE": 3.1484498373876253,
+        "MAE": 2.3569555860479876,
+        "bias": -2.224030881760136e-15
+      },
+      "static_flowing_outlet_C": {
+        "RMSE": 1.7681692013730563,
+        "MAE": 1.3779371021749431,
+        "bias": 8.958311571520135e-14
+      },
+      "PV_samples": 224099,
+      "outlet_samples": 128734,
+      "thermal_power_W": {
+        "RMSE": 55.08139430225092,
+        "MAE": 39.74796430757834,
+        "bias": -4.563301492448816
+      },
+      "signed_active_heat_measured_kWh": 9.71330457684813,
+      "signed_active_heat_predicted_kWh": 8.89739894583576
+    },
+    "development": {
+      "PV_temperature_C": {
+        "RMSE": 0.8903522237562436,
+        "MAE": 0.6616909735545013,
+        "bias": -0.00906982283132001
+      },
+      "flowing_outlet_C": {
+        "RMSE": 0.8543403896969539,
+        "MAE": 0.6632158339240198,
+        "bias": -0.13617851636654904
+      },
+      "electrical_power_W": {
+        "RMSE": 7.313052590149313,
+        "MAE": 4.168058672430658,
+        "bias": -1.5086036946848407
+      },
+      "static_PV_temperature_C": {
+        "RMSE": 3.190396674579109,
+        "MAE": 2.429295802919813,
+        "bias": -0.5545585090157261
+      },
+      "static_flowing_outlet_C": {
+        "RMSE": 1.7352087344611935,
+        "MAE": 1.3292777239735825,
+        "bias": -0.4373069115882412
+      },
+      "PV_samples": 68197,
+      "outlet_samples": 29274,
+      "thermal_power_W": {
+        "RMSE": 56.611850648969586,
+        "MAE": 39.99295818685459,
+        "bias": -10.895798050705316
+      },
+      "signed_active_heat_measured_kWh": 4.96093948059017,
+      "signed_active_heat_predicted_kWh": 4.51793449151191
+    },
+    "held_out": {
+      "PV_temperature_C": {
+        "RMSE": 1.2498526093073192,
+        "MAE": 0.814214342192638,
+        "bias": 0.32779965500204483
+      },
+      "flowing_outlet_C": {
+        "RMSE": 1.0807753062208438,
+        "MAE": 0.8759895661793954,
+        "bias": 0.045281240078764516
+      },
+      "electrical_power_W": {
+        "RMSE": 6.08677044004853,
+        "MAE": 4.658584808081706,
+        "bias": -1.9021823862158356
+      },
+      "static_PV_temperature_C": {
+        "RMSE": 2.9695615963023245,
+        "MAE": 2.3085079690160395,
+        "bias": 0.40367174552006907
+      },
+      "static_flowing_outlet_C": {
+        "RMSE": 1.7600221669708642,
+        "MAE": 1.3956468244712132,
+        "bias": -0.2021749921804648
+      },
+      "PV_samples": 68320,
+      "outlet_samples": 39595,
+      "thermal_power_W": {
+        "RMSE": 62.0965705182262,
+        "MAE": 48.591887359614226,
+        "bias": 1.4768807911831214
+      },
+      "signed_active_heat_measured_kWh": -0.6287087149743249,
+      "signed_active_heat_predicted_kWh": -0.5474905275758586
+    }
+  },
+  "numerical_refinement": {
+    "5_vs_2p5_s_max_C": [
+      0.0026740142559020796,
+      0.4811962621032464,
+      0.03453116230686959
+    ],
+    "2p5_vs_1p25_s_max_C": [
+      0.000671331246842044,
+      0.07828537046914086,
+      0.00866180492023716
+    ],
+    "LSODA_vs_1p25_s_max_C": [
+      0.00012499180672165267,
+      0.00030037142144578866,
+      0.0013124656816430047
+    ]
+  },
+  "parameter_physical_uniqueness": "Not established; no confidence intervals claimed",
+  "elapsed_seconds": 36.1933974399999,
+  "python": "3.12.14",
+  "instantaneous_energy_cancellation_max_W": 2.8421709430404007e-13
+}

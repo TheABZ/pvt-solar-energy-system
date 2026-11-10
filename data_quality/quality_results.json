@@ -1,0 +1,66 @@
+{
+  "status": "Dataset assessment only; no fitted or validated model",
+  "csv_bytes": 214699357,
+  "md5": "d0898b4ab924f4646a31571570fedd97",
+  "rows": 1002240,
+  "original_numeric_columns": 22,
+  "start_utc": "2021-07-11T00:00:00+00:00",
+  "end_utc": "2021-09-06T23:59:55+00:00",
+  "unique_utc_dates": 58,
+  "step_seconds_counts": {
+    "5.0": 1002239
+  },
+  "missing_numeric_cells": 0,
+  "infinite_numeric_cells": 0,
+  "daylight_rows": 360616,
+  "illuminated_flowing_rows": 197603,
+  "zero_flow_rows": 800956,
+  "negative_flow_rows": 0,
+  "negative_tilted_irradiance_rows": 0,
+  "flow_on_transitions": 1096,
+  "pv_temperature_C": {
+    "min": 4.877768,
+    "max": 64.741848
+  },
+  "flow_Lph": {
+    "min": -0.0,
+    "max": 120.093763
+  },
+  "tilted_irradiance_Wpm2": {
+    "min": 0.0,
+    "max": 1528.0
+  },
+  "inlet_temperature_C": {
+    "min": 6.968315,
+    "max": 49.419404
+  },
+  "ambient_temperature_C": {
+    "min": 3.995,
+    "max": 33.68
+  },
+  "rear_spread_daylight_median_K": 9.298664000000002,
+  "rear_spread_daylight_p95_K": 15.878155750000001,
+  "power_difference_gt1W_daylight_rows": 18303,
+  "negative_heat_active_rows": 82795,
+  "partitions": {
+    "calibration": {
+      "days": 34,
+      "rows": 587520,
+      "first_date": "2021-07-11",
+      "last_date": "2021-08-13"
+    },
+    "development": {
+      "days": 12,
+      "rows": 207360,
+      "first_date": "2021-08-14",
+      "last_date": "2021-08-25"
+    },
+    "held_out": {
+      "days": 12,
+      "rows": 207360,
+      "first_date": "2021-08-26",
+      "last_date": "2021-09-06"
+    }
+  },
+  "illustrative_calibration_day": "2021-07-15"
+}

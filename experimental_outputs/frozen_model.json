@@ -1,0 +1,97 @@
+{
+  "chosen": {
+    "variant": "wind_front",
+    "seed": 0,
+    "training_MSE": 1.2832339289009538,
+    "nfev": 15,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied.",
+    "parameters": {
+      "C_PV": 37992.44749980281,
+      "C_absorber": 200.0000000000056,
+      "C_fluid": 9559.987087992025,
+      "H_front": 11.538473920376427,
+      "H_PV_absorber": 236.76650135223267,
+      "H_absorber_rear": 24.924355115016397,
+      "H_absorber_fluid": 64.57659391766968,
+      "H_sky": 18.045173732003676,
+      "solar_aperture": 2.999999882685114,
+      "H_wind": 14.618221267230297
+    },
+    "active_bounds": [
+      "C_absorber",
+      "solar_aperture"
+    ],
+    "jacobian_condition": 15347.128648104112,
+    "development_PV": {
+      "RMSE": 0.8903522237562436,
+      "MAE": 0.6616909735545013,
+      "bias": -0.00906982283132001
+    },
+    "development_fluid": {
+      "RMSE": 0.8543403896969539,
+      "MAE": 0.6632158339240198,
+      "bias": -0.13617851636654904
+    },
+    "selection_score_K": 0.8723463067265987
+  },
+  "electrical_coefficients": [
+    0.27084142254538157,
+    -0.0005415931506760017,
+    -0.028649732608316065
+  ],
+  "selection": "Mean of development PV and flowing-outlet temperature RMSE; no test scores used",
+  "initial_state_C": [
+    14.407274,
+    15.746962499999999,
+    17.086651
+  ],
+  "first_test_state_C": [
+    5.815513733677875,
+    6.076894517267205,
+    6.071582008881156
+  ],
+  "first_test_time_UTC": "2021-08-26T00:00:00+00:00",
+  "parameter_bounds": {
+    "C_PV": [
+      200.0,
+      200000.0
+    ],
+    "C_absorber": [
+      200.0,
+      500000.0
+    ],
+    "C_fluid": [
+      200.0,
+      100000.0
+    ],
+    "H_front": [
+      0.1,
+      200.0
+    ],
+    "H_PV_absorber": [
+      1.0,
+      2000.0
+    ],
+    "H_absorber_rear": [
+      0.1,
+      200.0
+    ],
+    "H_absorber_fluid": [
+      1.0,
+      3000.0
+    ],
+    "H_sky": [
+      0.1,
+      30.0
+    ],
+    "solar_aperture": [
+      0.4,
+      3.0
+    ],
+    "H_wind": [
+      0.001,
+      50.0
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+name: Numerical checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python validation_tools.py
+      - run: python baseline_model.py
+      - name: Check conservation and physical limits
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r = json.loads(Path('results.json').read_text())
+          assert r['checks']['dark_max_temperature_deviation_C'] < 1e-8
+          assert r['checks']['beta_zero_gross_electricity_difference_kWh'] < 1e-8
+          assert r['cooled']['energy_residual_pct'] < 0.01
+          assert r['dry']['energy_residual_pct'] < 0.01
+          assert r['refinement']['peak_temperature_change_C'] < 0.01
+          assert r['refinement']['electricity_change_kWh'] < 1e-4
+          PY

@@ -1,0 +1,16 @@
+csv_field,source_unit,model_role,qualification
+date_time,UTC,time,Retain five second timestamps
+I_g_t_Wpm2,W/m2,incident irradiance,Use collector plane rather than global horizontal
+T_air_C,degree C,ambient input,Time varying measured boundary
+T_fluid_in_C,degree C,inlet input,Time varying measured boundary
+flow_rate_fluid_lph,L/h,fluid input,Multiply by 1040/3600000 for kg/s
+T_PV_C,degree C,PV temperature target,Rear PV sensor is a proxy for junction temperature
+T_back_surf_C,degree C,rear surface target,Test observation model before equating with internal backplate
+T_back_surf_left_C,degree C,spatial diagnostic,Not an independent lumped state measurement
+T_back_surf_right_C,degree C,spatial diagnostic,Compare with central sensor
+T_fluid_out_C,degree C,outlet temperature target,Well mixed fluid approximation requires testing
+I_PV_A,A,raw power diagnostic,Multiply by U_PV_V
+U_PV_V,V,raw power diagnostic,Multiply by I_PV_A
+P_el_W,W,filtered electrical target,Already Hampel corrected in source
+v_wind_t_mps,m/s,optional loss input,Test wind dependent loss variant on development dates
+T_sky_C,degree C,optional radiation input,Convert to kelvin before fourth power radiation calculation

@@ -1,0 +1,12 @@
+{
+  "experimental_data": {
+    "DOI": "10.57739/3720",
+    "download_url": "https://people.hochschule-burgenland.at/bitstreams/efa2346c-077c-4c88-b422-9a89f9fc34eb/download",
+    "md5": "d0898b4ab924f4646a31571570fedd97",
+    "bytes": 214699357
+  },
+  "data_article": "https://doi.org/10.1016/j.dib.2023.109417",
+  "related_model_article": "https://doi.org/10.1016/j.enbuild.2023.113277",
+  "related_model_pdf": "https://people.hochschule-burgenland.at/server/api/core/bitstreams/fc69c482-ddb6-46d5-9663-a59f49b7770a/content",
+  "retrieved": "2026-11-10"
+}

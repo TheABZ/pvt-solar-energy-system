@@ -1,0 +1,385 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "source_sha256": "cda755f51491b400ea94e57a1256873b3cccc7bde99c2e7e7782d4c1d7c57318",
+  "pointwise_balance_max_W": 3.637978807091713e-12,
+  "jacobian_max_error_per_s": 1.1724649029432044e-13,
+  "noon_eigenvalues_per_s": [
+    -0.08629976800033393,
+    -0.027164218755325077,
+    -0.0035175252060634793
+  ],
+  "decay_times_s": [
+    11.587516666280385,
+    36.813133078011575,
+    284.2907844060957
+  ],
+  "frozen_exact_max_error_C": 6.029672761087568e-09,
+  "solver_comparison": {
+    "DOP853": {
+      "max_temperature_difference_C": 3.518347050146531e-06,
+      "function_evaluations": 10979
+    },
+    "Radau": {
+      "max_temperature_difference_C": 3.520213606833522e-06,
+      "function_evaluations": 5756
+    }
+  },
+  "augmented_energy": {
+    "electrical_kWh": 2.078766130968338,
+    "thermal_kWh": 4.957971545493175,
+    "balance_residual_J": 1.0535222827456892e-07,
+    "baseline_electrical_difference_kWh": -8.721395485800087e-07,
+    "baseline_thermal_difference_kWh": -9.355016654666315e-07
+  },
+  "analytic_incident_kWh": 11.000789666511805,
+  "sensitivity_scenarios": [
+    {
+      "parameter": "HCA",
+      "value": 15.36,
+      "peak_cell_C": 43.88627322554625,
+      "net_kWh": 2.0100648461127153
+    },
+    {
+      "parameter": "HCA",
+      "value": 23.04,
+      "peak_cell_C": 41.51090725308338,
+      "net_kWh": 2.0263752157124664
+    },
+    {
+      "parameter": "HCB",
+      "value": 96.0,
+      "peak_cell_C": 43.57770741305197,
+      "net_kWh": 2.0121810924259957
+    },
+    {
+      "parameter": "HCB",
+      "value": 144.0,
+      "peak_cell_C": 41.951802068867245,
+      "net_kWh": 2.023347782646525
+    },
+    {
+      "parameter": "HBW",
+      "value": 128.0,
+      "peak_cell_C": 43.263154317430555,
+      "net_kWh": 2.0143421114605258
+    },
+    {
+      "parameter": "HBW",
+      "value": 192.0,
+      "peak_cell_C": 42.17343762708892,
+      "net_kWh": 2.021824389137909
+    },
+    {
+      "parameter": "CC",
+      "value": 9600.0,
+      "peak_cell_C": 42.61990769870769,
+      "net_kWh": 2.0187521723910886
+    },
+    {
+      "parameter": "CC",
+      "value": 14400.0,
+      "peak_cell_C": 42.617737694442376,
+      "net_kWh": 2.0187804900527797
+    },
+    {
+      "parameter": "TIN",
+      "value": 20.0,
+      "peak_cell_C": 39.385041003421904,
+      "net_kWh": 2.047097727655219
+    },
+    {
+      "parameter": "TIN",
+      "value": 30.0,
+      "peak_cell_C": 45.852784954390046,
+      "net_kWh": 1.9904327901156629
+    }
+  ],
+  "local_flow_refinement": {
+    "best_tested_flow_kg_s": 0.012750000000000003,
+    "net_kWh": 2.0452770179882895,
+    "spacing_kg_s": 0.00025,
+    "interval_kg_s": [
+      0.009,
+      0.016
+    ],
+    "coarse_best_flow_kg_s": 0.0125,
+    "net_gain_over_coarse_kWh": 1.8886337440626733e-06
+  },
+  "table_4_1_comparisons": [
+    {
+      "metric": "Peak cell temperature (\u00b0C)",
+      "case": "dry",
+      "displayed": "72.530",
+      "recomputed": 72.53020940949273,
+      "passed": true
+    },
+    {
+      "metric": "Peak cell temperature (\u00b0C)",
+      "case": "cooled",
+      "displayed": "42.619",
+      "recomputed": 42.618912978905975,
+      "passed": true
+    },
+    {
+      "metric": "Noon cell temperature (\u00b0C)",
+      "case": "dry",
+      "displayed": "72.438",
+      "recomputed": 72.43810548775416,
+      "passed": true
+    },
+    {
+      "metric": "Noon cell temperature (\u00b0C)",
+      "case": "cooled",
+      "displayed": "42.615",
+      "recomputed": 42.61540560498552,
+      "passed": true
+    },
+    {
+      "metric": "Noon efficiency (%)",
+      "case": "dry",
+      "displayed": "16.205",
+      "recomputed": 16.20495156097967,
+      "passed": true
+    },
+    {
+      "metric": "Noon efficiency (%)",
+      "case": "cooled",
+      "displayed": "18.591",
+      "recomputed": 18.59076755160116,
+      "passed": true
+    },
+    {
+      "metric": "Minimum modeled efficiency (%)",
+      "case": "dry",
+      "displayed": "16.198",
+      "recomputed": 16.197583247240583,
+      "passed": true
+    },
+    {
+      "metric": "Minimum modeled efficiency (%)",
+      "case": "cooled",
+      "displayed": "18.590",
+      "recomputed": 18.590486961687525,
+      "passed": true
+    },
+    {
+      "metric": "Gross electricity (kWh)",
+      "case": "dry",
+      "displayed": "1.874765",
+      "recomputed": 1.8747652154922878,
+      "passed": true
+    },
+    {
+      "metric": "Gross electricity (kWh)",
+      "case": "cooled",
+      "displayed": "2.078765",
+      "recomputed": 2.0787652588287893,
+      "passed": true
+    },
+    {
+      "metric": "Pump electricity (kWh)",
+      "case": "dry",
+      "displayed": "0",
+      "recomputed": 0.0,
+      "passed": true
+    },
+    {
+      "metric": "Pump electricity (kWh)",
+      "case": "cooled",
+      "displayed": "0.060000",
+      "recomputed": 0.06,
+      "passed": true
+    },
+    {
+      "metric": "Net electricity (kWh)",
+      "case": "dry",
+      "displayed": "1.874765",
+      "recomputed": 1.8747652154922878,
+      "passed": true
+    },
+    {
+      "metric": "Net electricity (kWh)",
+      "case": "cooled",
+      "displayed": "2.018765",
+      "recomputed": 2.018765258828789,
+      "passed": true
+    },
+    {
+      "metric": "Daily gross electrical efficiency (%)",
+      "case": "dry",
+      "displayed": "17.042",
+      "recomputed": 17.04210348463877,
+      "passed": true
+    },
+    {
+      "metric": "Daily gross electrical efficiency (%)",
+      "case": "cooled",
+      "displayed": "18.897",
+      "recomputed": 18.896516944352197,
+      "passed": true
+    },
+    {
+      "metric": "Delivered heat (kWh)",
+      "case": "dry",
+      "displayed": "0",
+      "recomputed": 0.0,
+      "passed": true
+    },
+    {
+      "metric": "Delivered heat (kWh)",
+      "case": "cooled",
+      "displayed": "4.957971",
+      "recomputed": 4.957970609991509,
+      "passed": true
+    },
+    {
+      "metric": "Daily thermal efficiency (%)",
+      "case": "dry",
+      "displayed": "0",
+      "recomputed": 0.0,
+      "passed": true
+    },
+    {
+      "metric": "Daily thermal efficiency (%)",
+      "case": "cooled",
+      "displayed": "45.069",
+      "recomputed": 45.06924254357144,
+      "passed": true
+    }
+  ],
+  "noon_flux_W": {
+    "absorbed": 1296.0000000000002,
+    "electrical": 267.70705274305675,
+    "front": 338.2157876157219,
+    "cell_to_backplate": 689.7673124289324,
+    "rear": 37.975502937848795,
+    "backplate_to_water": 651.6706023960865,
+    "water": 651.6121244993446
+  },
+  "daily_partition_kWh": {
+    "dry": {
+      "absorbed": 9.900706772869498,
+      "electrical": 1.8747652154922878,
+      "environment": 8.012702569316547,
+      "water": 0.0,
+      "storage": 0.013240553589690963
+    },
+    "cooled": {
+      "absorbed": 9.900706772869498,
+      "electrical": 2.0787652588287893,
+      "environment": 2.8622069185753674,
+      "water": 4.957970609991509,
+      "storage": 0.0017655618580145252
+    }
+  },
+  "additional_table_checks": [
+    {
+      "table": "4.2",
+      "metric": "Absorbed sunlight",
+      "actual": 1296.0000000000002,
+      "displayed": "1296.000"
+    },
+    {
+      "table": "4.2",
+      "metric": "Electrical export",
+      "actual": 267.70705274305675,
+      "displayed": "267.707"
+    },
+    {
+      "table": "4.2",
+      "metric": "Front environmental loss",
+      "actual": 338.2157876157219,
+      "displayed": "338.216"
+    },
+    {
+      "table": "4.2",
+      "metric": "Cell to backplate",
+      "actual": 689.7673124289324,
+      "displayed": "689.767"
+    },
+    {
+      "table": "4.2",
+      "metric": "Rear environmental loss",
+      "actual": 37.975502937848795,
+      "displayed": "37.976"
+    },
+    {
+      "table": "4.2",
+      "metric": "Backplate to water",
+      "actual": 651.6706023960865,
+      "displayed": "651.671"
+    },
+    {
+      "table": "4.2",
+      "metric": "Delivered water heat",
+      "actual": 651.6121244993446,
+      "displayed": "651.612"
+    },
+    {
+      "table": "4.3",
+      "metric": "Absorbed solar energy dry",
+      "actual": 9.900706772869498,
+      "displayed": "9.900707"
+    },
+    {
+      "table": "4.3",
+      "metric": "Absorbed solar energy cooled",
+      "actual": 9.900706772869498,
+      "displayed": "9.900707"
+    },
+    {
+      "table": "4.3",
+      "metric": "Electrical export dry",
+      "actual": 1.8747652154922878,
+      "displayed": "1.874765"
+    },
+    {
+      "table": "4.3",
+      "metric": "Electrical export cooled",
+      "actual": 2.0787652588287893,
+      "displayed": "2.078765"
+    },
+    {
+      "table": "4.3",
+      "metric": "Environmental heat loss dry",
+      "actual": 8.012702569316547,
+      "displayed": "8.012703"
+    },
+    {
+      "table": "4.3",
+      "metric": "Environmental heat loss cooled",
+      "actual": 2.8622069185753674,
+      "displayed": "2.862207"
+    },
+    {
+      "table": "4.3",
+      "metric": "Delivered water heat dry",
+      "actual": 0.0,
+      "displayed": "0"
+    },
+    {
+      "table": "4.3",
+      "metric": "Delivered water heat cooled",
+      "actual": 4.957970609991509,
+      "displayed": "4.957971"
+    },
+    {
+      "table": "4.3",
+      "metric": "Final minus initial stored heat dry",
+      "actual": 0.013240553589690963,
+      "displayed": "0.013241"
+    },
+    {
+      "table": "4.3",
+      "metric": "Final minus initial stored heat cooled",
+      "actual": 0.0017655618580145252,
+      "displayed": "0.001766"
+    }
+  ],
+  "all_assertions_passed": true
+}
