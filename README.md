@@ -1,6 +1,6 @@
 # Hybrid Photovoltaic–Thermal Solar Energy System
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24419431.svg)](https://doi.org/10.5281/zenodo.24419431)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24419430.svg)](https://doi.org/10.5281/zenodo.24419430)
 
 Computational modeling and efficiency optimization by **Gabriel Chiazor Unomah**, B.Sc. Physics, University of Lagos.
 
@@ -43,7 +43,15 @@ To repeat the complete calibration and reserved-period evaluation:
 python experimental_benchmark.py
 ```
 
-This step requires Linux, macOS or Windows Subsystem for Linux, with a C compiler available as `cc`. It compiles `thermal_core.c` locally to accelerate repeated integration. Ordinary Windows Python can run the baseline and portable replay without a compiler. Experimental scripts overwrite their corresponding result records when rerun.
+To estimate what water cooling would achieve on the measured collector (weather-driven model, about 30 s):
+
+```sh
+python weather_driven_counterfactual.py
+```
+
+This refits the same three-state model with ambient air as the rear boundary (the collector has no rear insulation), so it needs only weather, inlet temperature and flow. It is scored once on the reserved days and then compares a dry module, the measured operation and ambient-temperature inlet at several flows over all 58 measured days. With the fitted electrical law, the best net electrical gain is 0.47% (20 L/h); with a typical -0.4 %/K coefficient it is 1.09%. Results are written to `experimental_outputs/weather_model.json`, `counterfactual_results.json` and `weather_counterfactual.png`.
+
+These two steps require Linux, macOS or Windows Subsystem for Linux, with a C compiler available as `cc`. It compiles `thermal_core.c` locally to accelerate repeated integration. Ordinary Windows Python can run the baseline and portable replay without a compiler. Experimental scripts overwrite their corresponding result records when rerun.
 
 ## Saved research records
 
@@ -69,7 +77,8 @@ Two fitted parameters reach their declared bounds. Parameter uniqueness, confide
 | `prepare_validation.py`, `field_mapping.csv` | Public data retrieval, checksum checks and measured-field mapping |
 | `experimental_benchmark.py`, `thermal_core.c` | Calibration and chronological held-out evaluation |
 | `replay_frozen_model.py` | Independent SciPy integration with frozen parameters |
-| `experimental_outputs/` | Original fitted model, scores and daily error records |
+| `weather_driven_counterfactual.py` | Weather-driven model of the measured collector and cooling scenarios |
+| `experimental_outputs/` | Original fitted model, scores and daily error records; weather-driven model and cooling scenarios |
 | `data_quality/` | Original source quality summaries and date partitions |
 | `numerical_audit/` | Earlier detailed numerical verification records |
 | `source_manifest.json`, `environment.json` | Source provenance and original package versions |
@@ -78,7 +87,7 @@ The thesis PDF, editable thesis and private reviewer correspondence are supplied
 
 ## How to cite
 
-If you use this code, please cite the archived release: Unomah, G. C. (2026). *Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code*. Zenodo. https://doi.org/10.5281/zenodo.24419431 (version 1.0.0). To cite whichever version is latest, use the concept DOI https://doi.org/10.5281/zenodo.24419430. A `CITATION.cff` file is included for citation managers.
+If you use this code, please cite the archived release: Unomah, G. C. (2026). *Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code*. Zenodo. Concept DOI (always resolves to the latest version): https://doi.org/10.5281/zenodo.24419430. Version 1.0.0: https://doi.org/10.5281/zenodo.24419431. Version 1.1.0 adds the weather-driven cooling scenarios; its version DOI is listed on the Zenodo record. A `CITATION.cff` file is included for citation managers.
 
 ## Data sources
 

@@ -1,15 +1,38 @@
 {
   "title": "Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code",
   "upload_type": "software",
-  "description": "Python and C source for a three-node transient model of a water-cooled photovoltaic-thermal (PV/T) collector. Includes the controlled pure-water simulation (dry and cooled comparison, open-rack dry reference, flow-rate sweep with a pump law, conservation and refinement checks), scripts that regenerate the paper's simulation figures and audit values, and a conditional experimental benchmark that fits and tests an adapted three-state model on published five-second water–glycol PV/T measurements (DOI 10.57739/3720). The measurement data are not redistributed.",
+  "description": "Python and C source for a three-node transient model of a water-cooled photovoltaic-thermal (PV/T) collector. Includes the controlled pure-water simulation (dry and cooled comparison, open-rack dry reference, flow-rate sweep with a pump law, conservation and refinement checks), scripts that regenerate the paper's simulation figures and audit values, and a conditional experimental benchmark that fits and tests an adapted three-state model on published five-second water–glycol PV/T measurements (DOI 10.57739/3720). A weather-driven variant of the identified model estimates the cooling benefit on the measured collector under 58 days of measured weather. The measurement data are not redistributed.",
   "creators": [
-    {"name": "Unomah, Gabriel Chiazor", "affiliation": "Department of Physics, University of Lagos"}
+    {
+      "name": "Unomah, Gabriel Chiazor",
+      "affiliation": "Department of Physics, University of Lagos"
+    }
   ],
   "license": "MIT",
-  "keywords": ["photovoltaic-thermal", "PV/T", "transient heat transfer", "solar energy", "parameter identification", "numerical simulation"],
+  "keywords": [
+    "photovoltaic-thermal",
+    "PV/T",
+    "transient heat transfer",
+    "solar energy",
+    "parameter identification",
+    "numerical simulation"
+  ],
   "related_identifiers": [
-    {"identifier": "10.57739/3720", "relation": "references", "scheme": "doi", "resource_type": "dataset"},
-    {"identifier": "10.1016/j.dib.2023.109417", "relation": "references", "scheme": "doi"},
-    {"identifier": "10.1016/j.enbuild.2023.113277", "relation": "references", "scheme": "doi"}
+    {
+      "identifier": "10.57739/3720",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.1016/j.dib.2023.109417",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1016/j.enbuild.2023.113277",
+      "relation": "references",
+      "scheme": "doi"
+    }
   ]
 }

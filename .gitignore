@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Public measurement data and regenerated outputs (download with prepare_validation.py)
+data.csv
+outputs/
+figures/
