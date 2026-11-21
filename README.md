@@ -18,12 +18,13 @@ Install Python 3.10 or newer, then download this repository using **Code → Dow
 ```sh
 python -m pip install -r requirements.txt
 python baseline_model.py
+python figures_and_audit.py
 python validation_tools.py
 ```
 
 On Windows, use `py` if `python` is unavailable. On some Linux/macOS installations use `python3`.
 
-The baseline writes `results.json`, `pvt_results.csv` and `pvt_comparison.png` beside the script. It reports a dry/cooled comparison, a finite flow sweep, an energy balance residual, solver refinement, darkness equilibrium and a zero temperature-coefficient check. `validation_tools.py` checks units, heat-flow signs and conservation including stagnant water.
+The baseline writes `results.json`, `pvt_results.csv` and `pvt_comparison.png` beside the script. It also reports an open-rack dry reference (rear loss equal to the front loss) alongside the rear-insulated dry panel. The baseline also reports a dry/cooled comparison, a finite flow sweep, an energy balance residual, solver refinement, darkness equilibrium and a zero temperature-coefficient check. `figures_and_audit.py` regenerates the paper's simulation figures (Figs. 3–7) at 300 dpi and writes `figures/audit_results.json` with the noon heat rates, daily energy accounting and Jacobian time scales. `validation_tools.py` checks units, heat-flow signs and conservation including stagnant water.
 
 ## Experimental workflow
 
@@ -44,7 +45,7 @@ This step requires Linux, macOS or Windows Subsystem for Linux, with a C compile
 
 ## Saved research records
 
-`experimental_outputs/benchmark_results.json` contains the original full-period fits and metrics. `frozen_model.json` stores the selected parameters and forecast states; `portable_replay_results.json` stores the earlier first-date replay. These are carried over from the reviewed package. This GitHub publication reran the baseline and numerical checks, but did not rerun the 205 MiB experimental workflow.
+`experimental_outputs/benchmark_results.json` contains the original full-period fits and metrics. `frozen_model.json` stores the selected parameters and forecast states; `portable_replay_results.json` stores the earlier first-date replay. These are carried over from the reviewed package. A full rerun of the experimental workflow from the public download (21 November 2026: checksum verified, 1,002,240 records, calibration and reserved-period evaluation repeated) reproduced the saved benchmark records to floating-point precision.
 
 The original package reports these reserved-period RMSE values:
 
@@ -60,7 +61,8 @@ Two fitted parameters reach their declared bounds. Parameter uniqueness, confide
 
 | File or folder | Contents |
 | --- | --- |
-| `baseline_model.py` | Commented illustrative model, flow sweep and plots |
+| `baseline_model.py` | Commented illustrative model, flow sweep, open-rack dry reference and plots |
+| `figures_and_audit.py` | Paper simulation figures (Figs. 3–7) and audit values (Tables 6 and 8, Jacobian time scales) |
 | `validation_tools.py` | Unit, sign and energy balance checks |
 | `prepare_validation.py`, `field_mapping.csv` | Public data retrieval, checksum checks and measured-field mapping |
 | `experimental_benchmark.py`, `thermal_core.c` | Calibration and chronological held-out evaluation |
@@ -71,6 +73,10 @@ Two fitted parameters reach their declared bounds. Parameter uniqueness, confide
 | `source_manifest.json`, `environment.json` | Source provenance and original package versions |
 
 The thesis PDF, editable thesis and private reviewer correspondence are supplied separately from this code repository.
+
+## How to cite
+
+If you use this code, please cite the archived release: Unomah, G. C. (2026). *Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code*. Zenodo. DOI: [to be added after the first archived release]. A `CITATION.cff` file is included for citation managers.
 
 ## Data sources
 

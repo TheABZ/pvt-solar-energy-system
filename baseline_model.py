@@ -52,7 +52,7 @@ def efficiency(tc, beta=BETA):
     return ETA_REF * (1.0 - beta * (tc - TREF))
 
 
-def rhs(t, y, flow, beta, sun):
+def rhs(t, y, flow, beta, sun, hba=HBA):
     """Return three temperature derivatives in deg C per second."""
     tc, tb, tw = y
     g = sun * irradiance(t)  # sun=0 enables the darkness verification.
@@ -63,7 +63,7 @@ def rhs(t, y, flow, beta, sun):
     qbw = HBW * (tb - tw) if flow > 0.0 else 0.0
     qcb = HCB * (tc - tb)           # Internal cell-to-backplate heat.
     qfront = HCA * (tc - TA)        # Front environmental heat loss.
-    qback = HBA * (tb - TA)         # Rear environmental heat loss.
+    qback = hba * (tb - TA)         # Rear environmental heat loss.
     useful = flow * CP * (tw - TIN) # Net outlet enthalpy transport.
 
     # Subtract electricity before assigning absorbed radiation to heat.
@@ -75,13 +75,14 @@ def rhs(t, y, flow, beta, sun):
     return [dtc, dtb, dtw]
 
 
-def simulate(flow, rtol=1e-7, step=60.0, dt=30.0, beta=BETA, sun=1.0):
+def simulate(flow, rtol=1e-7, step=60.0, dt=30.0, beta=BETA, sun=1.0,
+             hba=HBA):
     """Solve one case and return time histories and energy statistics."""
     # Reporting points are distinct from the solver's internal time steps.
     t = np.linspace(0.0, END, int(END / dt) + 1)
     sol = solve_ivp(
         rhs, (0.0, END), [TA, TA, TIN],
-        args=(flow, beta, sun), t_eval=t, method="LSODA",
+        args=(flow, beta, sun, hba), t_eval=t, method="LSODA",
         rtol=rtol, atol=rtol / 10.0, max_step=step
     )
     if not sol.success:
@@ -104,7 +105,7 @@ def simulate(flow, rtol=1e-7, step=60.0, dt=30.0, beta=BETA, sun=1.0):
     # Internal heat flows cancel when all three balances are added.
     net = (
         ALPHA * A * sun * irradiance(t) - pel
-        - HCA * (tc - TA) - HBA * (tb - TA) - qu
+        - HCA * (tc - TA) - hba * (tb - TA) - qu
     )
     initial = np.array([TA, TA, TIN])
     stored = np.dot([CC, CB, CW], sol.y[:, -1] - initial)
@@ -138,6 +139,14 @@ def main():
     wet = simulate(0.020)
     report = {"dry": dry[-1], "cooled": wet[-1]}
 
+    # Open-rack dry reference: rear loss set equal to the front loss, so the
+    # panel sheds heat from both faces. The baseline dry case above keeps the
+    # cooled collector's small rear loss (a rear-insulated panel).
+    HBA_OPEN = HCA
+    dry_open = simulate(0.0, hba=HBA_OPEN)
+    report["dry_open_rack"] = dry_open[-1]
+    report["dry_open_rack"]["hba_W_K"] = HBA_OPEN
+
     # Tighten integration controls and refine the output quadrature grid.
     fine = simulate(0.020, rtol=1e-9, step=15.0, dt=15.0)
     report["refinement"] = {
@@ -168,6 +177,16 @@ def main():
     sweep = [simulate(float(m))[-1] for m in flows]
     best = max(sweep, key=lambda s: s["net_electricity_kWh"])
     report["best_tested_flow"] = best
+
+    # Net gains of cooling measured against each dry reference.
+    def gain(case, ref):
+        return 100.0 * (case["net_electricity_kWh"] / ref["electricity_kWh"] - 1.0)
+    report["net_gain_pct"] = {
+        "ref_flow_vs_rear_insulated": gain(wet[-1], dry[-1]),
+        "ref_flow_vs_open_rack": gain(wet[-1], dry_open[-1]),
+        "best_flow_vs_rear_insulated": gain(best, dry[-1]),
+        "best_flow_vs_open_rack": gain(best, dry_open[-1]),
+    }
     report["sweep"] = sweep
     if best["flow_kg_s"] in (float(flows[0]), float(flows[-1])):
         print("Best point is at a boundary; extend the flow interval.")
