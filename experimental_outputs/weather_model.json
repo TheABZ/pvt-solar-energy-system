@@ -1,0 +1,207 @@
+{
+  "rear_boundary": "ambient air (measured T_air)",
+  "chosen": {
+    "variant": "wind_front",
+    "seed": 0,
+    "training_MSE": 1.398543212436599,
+    "nfev": 15,
+    "parameters": {
+      "C_PV": 38787.071774526295,
+      "C_absorber": 200.0000011477984,
+      "C_fluid": 10142.493184988267,
+      "H_front": 22.145109766968304,
+      "H_PV_absorber": 49.67217945083012,
+      "H_absorber_rear": 4.058623423606444,
+      "H_absorber_fluid": 2503.9569498300743,
+      "H_sky": 19.35495636074753,
+      "solar_aperture": 2.9999999982019547,
+      "H_wind": 15.000806701846079
+    },
+    "active_bounds": [
+      "C_absorber",
+      "solar_aperture"
+    ],
+    "jacobian_condition": 4366387.733749598,
+    "development_PV": {
+      "RMSE": 0.9298159253277426,
+      "MAE": 0.7049642366965505,
+      "bias": -0.10858100720385469
+    },
+    "development_fluid": {
+      "RMSE": 0.8979682012601209,
+      "MAE": 0.7116572490729064,
+      "bias": -0.19928839972989557
+    },
+    "selection_score_K": 0.9138920632939318
+  },
+  "all_fits": [
+    {
+      "variant": "constant_front",
+      "seed": 0,
+      "training_MSE": 6.5442549995771655,
+      "nfev": 10,
+      "parameters": {
+        "C_PV": 21988.594601510118,
+        "C_absorber": 200.00374334389997,
+        "C_fluid": 6458.323354393652,
+        "H_front": 29.442186868219537,
+        "H_PV_absorber": 283.13793076515844,
+        "H_absorber_rear": 19.659773363545394,
+        "H_absorber_fluid": 53.05063869893967,
+        "H_sky": 7.165978013159568,
+        "solar_aperture": 2.0548617528776134,
+        "H_wind": 0.0
+      },
+      "active_bounds": [
+        "C_absorber"
+      ],
+      "jacobian_condition": 223703.47311383876
+    },
+    {
+      "variant": "constant_front",
+      "seed": 1,
+      "training_MSE": 6.544167390060602,
+      "nfev": 14,
+      "parameters": {
+        "C_PV": 21955.007779328273,
+        "C_absorber": 204.6949743675571,
+        "C_fluid": 6446.127035552782,
+        "H_front": 20.22868911805317,
+        "H_PV_absorber": 423.67629352780665,
+        "H_absorber_rear": 29.432076352874066,
+        "H_absorber_fluid": 50.13355508215501,
+        "H_sky": 7.159786826676775,
+        "solar_aperture": 2.0525916420323633,
+        "H_wind": 0.0
+      },
+      "active_bounds": [],
+      "jacobian_condition": 252098.46190644748,
+      "development_PV": {
+        "RMSE": 2.95564485271537,
+        "MAE": 2.43519893305483,
+        "bias": -1.6081323899005335
+      },
+      "development_fluid": {
+        "RMSE": 2.06713860147994,
+        "MAE": 1.83576433302199,
+        "bias": -1.0332853130461193
+      },
+      "selection_score_K": 2.5113917270976547
+    },
+    {
+      "variant": "wind_front",
+      "seed": 0,
+      "training_MSE": 1.398543212436599,
+      "nfev": 15,
+      "parameters": {
+        "C_PV": 38787.071774526295,
+        "C_absorber": 200.0000011477984,
+        "C_fluid": 10142.493184988267,
+        "H_front": 22.145109766968304,
+        "H_PV_absorber": 49.67217945083012,
+        "H_absorber_rear": 4.058623423606444,
+        "H_absorber_fluid": 2503.9569498300743,
+        "H_sky": 19.35495636074753,
+        "solar_aperture": 2.9999999982019547,
+        "H_wind": 15.000806701846079
+      },
+      "active_bounds": [
+        "C_absorber",
+        "solar_aperture"
+      ],
+      "jacobian_condition": 4366387.733749598,
+      "development_PV": {
+        "RMSE": 0.9298159253277426,
+        "MAE": 0.7049642366965505,
+        "bias": -0.10858100720385469
+      },
+      "development_fluid": {
+        "RMSE": 0.8979682012601209,
+        "MAE": 0.7116572490729064,
+        "bias": -0.19928839972989557
+      },
+      "selection_score_K": 0.9138920632939318
+    },
+    {
+      "variant": "wind_front",
+      "seed": 1,
+      "training_MSE": 1.3989332858074048,
+      "nfev": 19,
+      "parameters": {
+        "C_PV": 38659.22594404157,
+        "C_absorber": 200.00000361737924,
+        "C_fluid": 10297.412026019609,
+        "H_front": 9.396220576277294,
+        "H_PV_absorber": 218.77006250604126,
+        "H_absorber_rear": 17.871165186073814,
+        "H_absorber_fluid": 67.89096352521628,
+        "H_sky": 19.352491876958872,
+        "solar_aperture": 2.999994836682747,
+        "H_wind": 15.000423287381857
+      },
+      "active_bounds": [
+        "C_absorber",
+        "solar_aperture"
+      ],
+      "jacobian_condition": 517795.6139278706
+    }
+  ],
+  "electrical_coefficients": [
+    0.27084142254538135,
+    -0.0005415931506760011,
+    -0.028649732608316027
+  ],
+  "scores": {
+    "calibration": {
+      "PV_temperature_C": {
+        "RMSE": 1.3115868703190792,
+        "MAE": 0.9287438583871875,
+        "bias": 0.11728073853037403
+      },
+      "flowing_outlet_C": {
+        "RMSE": 0.9148690636306062,
+        "MAE": 0.6959612957225062,
+        "bias": -0.0479858568062944
+      },
+      "electrical_power_W": {
+        "RMSE": 8.584225700898504,
+        "MAE": 4.911756327921855,
+        "bias": 0.3796316563325382
+      }
+    },
+    "development": {
+      "PV_temperature_C": {
+        "RMSE": 0.9298159253277426,
+        "MAE": 0.7049642366965505,
+        "bias": -0.10858100720385469
+      },
+      "flowing_outlet_C": {
+        "RMSE": 0.8979682012601209,
+        "MAE": 0.7116572490729064,
+        "bias": -0.19928839972989557
+      },
+      "electrical_power_W": {
+        "RMSE": 7.289684462961342,
+        "MAE": 4.133143661983446,
+        "bias": -1.481610856213046
+      }
+    },
+    "held_out": {
+      "PV_temperature_C": {
+        "RMSE": 1.3501427158407164,
+        "MAE": 0.9347058375294772,
+        "bias": 0.2493339215482389
+      },
+      "flowing_outlet_C": {
+        "RMSE": 1.0923898417395062,
+        "MAE": 0.9090791951912023,
+        "bias": -0.05485960204876656
+      },
+      "electrical_power_W": {
+        "RMSE": 6.01933144671187,
+        "MAE": 4.5899458462233635,
+        "bias": -1.8614547036487696
+      }
+    }
+  }
+}

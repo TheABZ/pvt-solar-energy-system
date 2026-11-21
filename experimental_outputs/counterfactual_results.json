@@ -1,0 +1,149 @@
+{
+  "dry_module": {
+    "gross_kWh": 86.6173907611175,
+    "pump_kWh": 0.0,
+    "net_kWh": 86.6173907611175,
+    "heat_kWh": 0.0,
+    "peak_PV_C": 70.19314111177802,
+    "net_gain_vs_dry_pct": 0.0,
+    "gross_gain_vs_dry_pct": 0.0,
+    "mean_daily_net_kWh": 1.4934032889847846
+  },
+  "measured_operation": {
+    "gross_kWh": 86.71512767593816,
+    "pump_kWh": 0.0,
+    "net_kWh": 86.71512767593816,
+    "heat_kWh": 11.697728149661149,
+    "peak_PV_C": 64.93762911062677,
+    "net_gain_vs_dry_pct": 0.11283751907305017,
+    "gross_gain_vs_dry_pct": 0.11283751907305017,
+    "mean_daily_net_kWh": 1.4950884082058304
+  },
+  "cool_inlet_10Lph": {
+    "gross_kWh": 86.92928984808489,
+    "pump_kWh": 0.010399752819692118,
+    "net_kWh": 86.9188900952652,
+    "heat_kWh": 67.40056626476033,
+    "peak_PV_C": 65.61390332616065,
+    "net_gain_vs_dry_pct": 0.3480817552899973,
+    "gross_gain_vs_dry_pct": 0.36008829661884345,
+    "mean_daily_net_kWh": 1.4986015533666412
+  },
+  "cool_inlet_20Lph": {
+    "gross_kWh": 87.10705953463042,
+    "pump_kWh": 0.08319802255753694,
+    "net_kWh": 87.02386151207288,
+    "heat_kWh": 108.28026994380332,
+    "peak_PV_C": 63.12376712533849,
+    "net_gain_vs_dry_pct": 0.4692715254796642,
+    "gross_gain_vs_dry_pct": 0.5653238561103446,
+    "mean_daily_net_kWh": 1.500411405380567
+  },
+  "cool_inlet_30Lph": {
+    "gross_kWh": 87.22680788028806,
+    "pump_kWh": 0.2807933261316871,
+    "net_kWh": 86.94601455415638,
+    "heat_kWh": 135.7252898325023,
+    "peak_PV_C": 61.469675447812136,
+    "net_gain_vs_dry_pct": 0.37939701271443305,
+    "gross_gain_vs_dry_pct": 0.7035736285929906,
+    "mean_daily_net_kWh": 1.499069216450972
+  },
+  "cool_inlet_40Lph": {
+    "gross_kWh": 87.3129745031023,
+    "pump_kWh": 0.6655841804602955,
+    "net_kWh": 86.647390322642,
+    "heat_kWh": 155.42589059417625,
+    "peak_PV_C": 60.55210116667099,
+    "net_gain_vs_dry_pct": 0.03463457079564414,
+    "gross_gain_vs_dry_pct": 0.8030532158410875,
+    "mean_daily_net_kWh": 1.4939205228041723
+  },
+  "cool_inlet_50Lph": {
+    "gross_kWh": 87.37795713412602,
+    "pump_kWh": 1.299969102461515,
+    "net_kWh": 86.0779880316645,
+    "heat_kWh": 170.25562770491243,
+    "peak_PV_C": 59.900865775493315,
+    "net_gain_vs_dry_pct": -0.6227418359214032,
+    "gross_gain_vs_dry_pct": 0.8780758301829783,
+    "mean_daily_net_kWh": 1.48410324192525
+  },
+  "cool_inlet_75Lph": {
+    "gross_kWh": 87.48696777093917,
+    "pump_kWh": 4.387395720807613,
+    "net_kWh": 83.09957205013156,
+    "heat_kWh": 195.07760733550265,
+    "peak_PV_C": 58.79595700598831,
+    "net_gain_vs_dry_pct": -4.061330732863744,
+    "gross_gain_vs_dry_pct": 1.003928890238548,
+    "mean_daily_net_kWh": 1.4327512422436475
+  },
+  "cool_inlet_100Lph": {
+    "gross_kWh": 87.55450639021694,
+    "pump_kWh": 10.39975281969212,
+    "net_kWh": 77.15475357052482,
+    "heat_kWh": 210.41977745938786,
+    "peak_PV_C": 58.10254011424548,
+    "net_gain_vs_dry_pct": -10.924638929253527,
+    "gross_gain_vs_dry_pct": 1.0819023995815247,
+    "mean_daily_net_kWh": 1.3302543719056004
+  },
+  "cool_inlet_150Lph": {
+    "gross_kWh": 87.63375887845504,
+    "pump_kWh": 35.09916576646091,
+    "net_kWh": 52.534593111994134,
+    "heat_kWh": 228.38506374668705,
+    "peak_PV_C": 57.313630699396725,
+    "net_gain_vs_dry_pct": -39.348677384106935,
+    "gross_gain_vs_dry_pct": 1.1733996007113445,
+    "mean_daily_net_kWh": 0.9057688467585195
+  },
+  "hot_measured_inlet_50Lph": {
+    "gross_kWh": 86.75783976658052,
+    "pump_kWh": 1.299969102461515,
+    "net_kWh": 85.457870664119,
+    "heat_kWh": 22.091891637761403,
+    "peak_PV_C": 64.93432694755242,
+    "net_gain_vs_dry_pct": -1.3386689287331999,
+    "gross_gain_vs_dry_pct": 0.16214873737117053,
+    "mean_daily_net_kWh": 1.4734115631744655
+  },
+  "sensitivity_beta_0p004": {
+    "cool_inlet_20Lph": {
+      "gross_gain_vs_dry_pct": 1.1853542893808244,
+      "net_gain_vs_dry_pct": 1.0856580328078236
+    },
+    "cool_inlet_50Lph": {
+      "gross_gain_vs_dry_pct": 1.8403002254273382,
+      "net_gain_vs_dry_pct": 0.2825462164740111
+    },
+    "cool_inlet_100Lph": {
+      "gross_gain_vs_dry_pct": 2.26683189897392,
+      "net_gain_vs_dry_pct": -10.195200172652807
+    },
+    "measured_operation": {
+      "gross_gain_vs_dry_pct": 0.24445117624500856
+    }
+  },
+  "_notes": {
+    "days": 58.0,
+    "pump_law": "5.0 W x (mass flow/0.02 kg/s)^3 in daylight (G >= 50.0 W/m2)",
+    "fitted_relative_temperature_coefficient_per_K": -0.0019996688305137424,
+    "mean_PV_C_at_G_ge_600": {
+      "dry_module": 48.91411564041964,
+      "measured_operation": 48.120946320694344,
+      "cool_inlet_10Lph": 46.70467251035488,
+      "cool_inlet_20Lph": 45.452870520862845,
+      "cool_inlet_30Lph": 44.60779378587971,
+      "cool_inlet_40Lph": 43.99873386062013,
+      "cool_inlet_50Lph": 43.53884723788562,
+      "cool_inlet_75Lph": 42.76622749241698,
+      "cool_inlet_100Lph": 42.286784585563844,
+      "cool_inlet_150Lph": 41.72339528518562,
+      "hot_measured_inlet_50Lph": 47.99868475749668
+    },
+    "measured_mean_PV_C_at_G_ge_600": 48.22510147630239,
+    "measured_mean_inlet_C_when_flowing_G_ge_600": 45.41443083234455
+  }
+}
