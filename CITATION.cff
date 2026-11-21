@@ -7,7 +7,7 @@ authors:
     given-names: Gabriel Chiazor
     affiliation: "Department of Physics, University of Lagos"
 license: MIT
-version: "1.1.0"
+version: "1.2.0"
 date-released: "2026-11-21"
 doi: "10.5281/zenodo.24419430"
 repository-code: "https://github.com/TheABZ/pvt-solar-energy-system"
@@ -18,6 +18,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24419431"
     description: "Version 1.0.0"
+  - type: doi
+    value: "10.5281/zenodo.24419952"
+    description: "Version 1.1.0"
 keywords:
   - photovoltaic-thermal
   - PV/T
