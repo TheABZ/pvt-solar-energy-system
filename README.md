@@ -1,5 +1,7 @@
 # Hybrid Photovoltaic–Thermal Solar Energy System
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24419431.svg)](https://doi.org/10.5281/zenodo.24419431)
+
 Computational modeling and efficiency optimization by **Gabriel Chiazor Unomah**, B.Sc. Physics, University of Lagos.
 
 This repository contains the Python source and supporting numerical records accompanying the PV/T thesis prepared for academic review. The source was recovered from the latest review package; the baseline model is unchanged.
@@ -76,7 +78,7 @@ The thesis PDF, editable thesis and private reviewer correspondence are supplied
 
 ## How to cite
 
-If you use this code, please cite the archived release: Unomah, G. C. (2026). *Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code*. Zenodo. DOI: [to be added after the first archived release]. A `CITATION.cff` file is included for citation managers.
+If you use this code, please cite the archived release: Unomah, G. C. (2026). *Hybrid photovoltaic–thermal solar energy system: simulation and experimental benchmark code*. Zenodo. https://doi.org/10.5281/zenodo.24419431 (version 1.0.0). To cite whichever version is latest, use the concept DOI https://doi.org/10.5281/zenodo.24419430. A `CITATION.cff` file is included for citation managers.
 
 ## Data sources
 
